@@ -1,0 +1,54 @@
+$main-color: #333;
+
+.header {
+  background-color: $main-color;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 20px;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+
+  &__menu {
+    margin-left: auto;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    color: #ffffff;
+
+    a {
+      border-radius: 5px;
+      transition: all 0.3s ease-in-out;
+      color: #ffffff;
+      font-size: 15px;
+      text-decoration: none;
+      padding: 10px;
+
+      &:hover {
+        background-color: lighten($main-color, 10%);
+      }
+    }
+  }
+  .content {
+    padding: 25px;
+    width: 100%;
+
+    .layout {
+      & > div {
+        border: 1px solid #ccc8;
+
+        & > div {
+          border: 1px solid rgba(255, 0, 0, 0.55);
+
+        }
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+}
