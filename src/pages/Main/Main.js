@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 import './Main.scss';
+import 'react-notifications-component/dist/theme.css'
 
 const Main = () => {
     const [fileContent, setFileContent] = useState('');
@@ -16,7 +17,7 @@ const Main = () => {
         if (file.type === "text/plain" || file.type === "text/csv") {
             reader.readAsText(file);
         } else {
-            alert("Підтримуються лише файли типів .txt і .csv");
+            console.error("Підтримуються лише файли типів .txt і .csv");
         }
     };
 
